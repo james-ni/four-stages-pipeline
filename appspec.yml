@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /home/ubuntu
+hooks:
+  ApplicationStart:
+    - location: runapp.sh
+      runas: ubuntu
+  ApplicationStop:
+    - location: stopapp.sh
+      runas: ubuntu
